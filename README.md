@@ -11,4 +11,4 @@ git config --global http.proxy http://c.user:passs@10.190.2.29:8080
 local sin proxy:
 git config --global --unset https.proxy https://c.user:passs@10.190.2.29:8080
 git clone git@github.com:usergithub/curso-angular6.git
-cd curso-angular6 
+cd curso-angular6  
