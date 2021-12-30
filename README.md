@@ -16,3 +16,11 @@ cd curso-angular6
 git remote add https https://github.com/miguelC-olon/curso-angular6.git
 git push https
 
+#Angular
+ng new angular-hola-mundo
+
+I solved the issue by:
+Delete node-modules folder
+Deleting the package-lock.json file
+Run npm install
+Now Run npm start
