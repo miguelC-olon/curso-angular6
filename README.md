@@ -24,3 +24,15 @@ Delete node-modules folder
 Deleting the package-lock.json file
 Run npm install
 Now Run npm start
+
+ng serve
+
+ng generate component saludador
+
+#instalo paquete bootstrap en el proyecto
+npm i -S bootstrap
+modificar el src/style.css 
+
+
+How to use QR Code scanner in Angular
+https://www.linkedin.com/pulse/how-use-qr-code-scanner-angular-david-nishimoto
