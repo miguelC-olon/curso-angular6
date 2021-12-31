@@ -35,6 +35,12 @@ ng generate component saludador
 npm i -S bootstrap
 modificar el src/style.css 
 
+logica de carga de app Angular:
+ver angular.json > main.ts e index.html > app.module > app.component a partir de ahi agregamos nuestros propios componentes
+
+#compilar para pase a ambiente productivo
+ng build --target = production --base-href /
+dir /
 
 How to use QR Code scanner in Angular
 https://www.linkedin.com/pulse/how-use-qr-code-scanner-angular-david-nishimoto
