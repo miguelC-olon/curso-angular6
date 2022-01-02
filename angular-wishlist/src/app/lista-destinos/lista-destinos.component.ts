@@ -24,4 +24,9 @@ export class ListaDestinosComponent implements OnInit {
 	  return false; //para que recargue la pagina con el post del formulario
   }
 
+  elegido(d: DestinoViaje){
+    this.destinos.forEach( function(x) {x.setSelected(false);});
+    d.setSelected(true);
+  }
+
 }
