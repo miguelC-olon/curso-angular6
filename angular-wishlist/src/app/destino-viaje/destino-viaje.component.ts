@@ -11,9 +11,11 @@ export class DestinoViajeComponent implements OnInit {
 	@Input() destino: DestinoViaje;
   @HostBinding('attr.class') ccsClass = 'col-md-4';
   @Output() clicked: EventEmitter<DestinoViaje>;
-	
+	@Input('idx') position: number;
+
   constructor() { 
     this.clicked = new EventEmitter();
+
   }
 
   ngOnInit(): void {
