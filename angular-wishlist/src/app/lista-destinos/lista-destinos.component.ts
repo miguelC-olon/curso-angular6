@@ -9,10 +9,11 @@ import { DestinoViaje } from '../models/destino-viaje.model';
 export class ListaDestinosComponent implements OnInit {
 
 	destinos: DestinoViaje[];
-	@Output() onItemAdded: new EventEmitter<DestinoViaje>;
+	@Output() onItemAdded: EventEmitter<DestinoViaje>;
 	
   constructor() { 
 	this.destinos = [];
+	this.onItemAdded = new EventEmitter();
   }
 
   ngOnInit(): void {
