@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { DestinoViaje } from '../models/destino-viaje.model';
 
 @Component({
@@ -9,6 +9,7 @@ import { DestinoViaje } from '../models/destino-viaje.model';
 export class ListaDestinosComponent implements OnInit {
 
 	destinos: DestinoViaje[];
+	@Output() onItemAdded: new EventEmitter<DestinoViaje>;
 	
   constructor() { 
 	this.destinos = [];
@@ -17,11 +18,13 @@ export class ListaDestinosComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  guardar(nombre:string, url:string):boolean {
-	  this.destinos.push(new DestinoViaje(nombre, url));
-    //console.log(this.destinos);
+  agregado(d: DestinoViaje) {
+	  ////this.destinos.push(d);
+    ////console.log(this.destinos);
+	//this.destinosApiClient.add(d); //no explicado ni implementado
+	this.onItemAdded.emit(d);
 	  
-	  return false; //para que recargue la pagina con el post del formulario
+	  //return false; //para que recargue la pagina con el post del formulario
   }
 
   elegido(d: DestinoViaje){
