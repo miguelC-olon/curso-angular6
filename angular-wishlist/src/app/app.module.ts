@@ -9,6 +9,7 @@ import { DestinoViajeComponent } from './destino-viaje/destino-viaje.component';
 import { ListaDestinosComponent } from './lista-destinos/lista-destinos.component';
 import { DestinoDetalleComponent } from './destino-detalle/destino-detalle.component';
 import { FormDetinoViajeComponent } from './form-detino-viaje/form-detino-viaje.component';
+import { DestinosApiClient } from './models/destinos-api-client.model';
 
 const routes: Routes = [
 	{path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -27,11 +28,11 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-	FormsModule,
-	ReactiveFormsModule,
-	RouterModule.forRoot(routes)
+	  FormsModule,
+	  ReactiveFormsModule,
+	  RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [DestinosApiClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

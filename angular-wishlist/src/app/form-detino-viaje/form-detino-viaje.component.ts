@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder} from '@angular/forms';
 import { DestinoViaje } from '../models/destino-viaje.model';
 
 @Component({
-  selector: 'app-form-detino-viaje',
+  selector: 'app-form-destino-viaje',
   templateUrl: './form-detino-viaje.component.html',
   styleUrls: ['./form-detino-viaje.component.css']
 })
@@ -17,6 +17,9 @@ export class FormDetinoViajeComponent implements OnInit {
 	this.fg = fb.group({
 		nombre: [''],
 		url: ['']
+	});
+	this.fg.valueChanges.subscribe((form: any) => {
+		console.log('cambio el formulario: ', form);
 	});
   }
 
