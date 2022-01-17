@@ -16,7 +16,8 @@ cd curso-angular6
 git remote add https https://github.com/miguelC-olon/curso-angular6.git
 git add -A
 git commit -m "comentarios de la versio"
-git push https
+git push (https)
+git pull
 
 #Angular
 ng new angular-hola-mundo
