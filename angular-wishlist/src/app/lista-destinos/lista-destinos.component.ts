@@ -11,6 +11,7 @@ export class ListaDestinosComponent implements OnInit {
 
 	//destinos: DestinoViaje[];
 	@Output() onItemAdded: EventEmitter<DestinoViaje>;
+  updates: string[];
 	
   constructor(public destinosApiClient:DestinosApiClient) { 
 	//this.destinos = [];
@@ -32,8 +33,10 @@ export class ListaDestinosComponent implements OnInit {
   elegido(d: DestinoViaje){
     //this.destinos.forEach( function(x) {x.setSelected(false);});
     //d.setSelected(true);
-    this.destinosApiClient.getAll().forEach(x => x.setSelected(false));
-    d.setSelected(true);
+    
+    //this.destinosApiClient.getAll().forEach(x => x.setSelected(false));
+    //d.setSelected(true);
+    this.destinosApiClient.elegir(d);
   }
 
 }

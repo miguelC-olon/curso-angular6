@@ -1,3 +1,5 @@
+//import {v4 as uuid} from 'uuid'; //falta hacer npm install uuid
+
 export class DestinoViaje {
     /*
     nombre: string;
@@ -12,6 +14,7 @@ export class DestinoViaje {
    private selected: boolean;
 
    public servicios: string[];
+   //id = uuid();
 
    constructor(public nombre: string, public u: string) {
        this.servicios = ['pileta','desayuno'];
