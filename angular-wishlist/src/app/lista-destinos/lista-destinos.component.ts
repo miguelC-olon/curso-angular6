@@ -16,6 +16,12 @@ export class ListaDestinosComponent implements OnInit {
   constructor(public destinosApiClient:DestinosApiClient) { 
 	//this.destinos = [];
 	this.onItemAdded = new EventEmitter();
+  this.updates = [];
+  this.destinosApiClient.subscribeOnChange((d: DestinoViaje) => {
+      if( d != null){
+        this.updates.push('Se ha elegido a ' + d.nombre);
+      }
+    });
   }
 
   ngOnInit(): void {
