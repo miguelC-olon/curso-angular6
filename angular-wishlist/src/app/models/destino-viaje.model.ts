@@ -15,6 +15,8 @@ export class DestinoViaje {
 
    public servicios: string[];
    //id = uuid();
+   id: String;
+   public votes = 0;
 
    constructor(public nombre: string, public u: string) {
        this.servicios = ['pileta','desayuno'];
@@ -26,4 +28,12 @@ export class DestinoViaje {
    setSelected(s: boolean) {
        this.selected = s;
    }
+   voteUp() {
+    this.votes++;
+    }
+    voteDown() {
+    if(this.votes > 0){
+        this.votes--;
+    }
+}
 }
