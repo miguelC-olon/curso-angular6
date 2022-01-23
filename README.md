@@ -43,5 +43,9 @@ ver angular.json > main.ts e index.html > app.module > app.component a partir de
 ng build --target = production --base-href /
 dir /
 
+#Npm Install is Failing (Could not resolve dependency) => try with: npm install --legacy-peer-deps. OR removing the node_modules folder and package-lock.json file and run command npm install.
+
 How to use QR Code scanner in Angular
 https://www.linkedin.com/pulse/how-use-qr-code-scanner-angular-david-nishimoto
+
+

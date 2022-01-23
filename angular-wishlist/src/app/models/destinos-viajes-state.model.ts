@@ -60,7 +60,7 @@ export type DestinosViajesActions = NuevoDestinoAction | ElegidoFavoritoAction
 
 //reducers se llaman cada vez que se dispara una accion, reciben el estado anterior y la accion que se dispara, para modificar el estado con el switch
 export function reducerDestinosViajes (
-    state: DestinosViajesState, 
+    state: DestinosViajesState,
     action: DestinosViajesActions): DestinosViajesState{
     switch(action.type){
         case DestinosViajesActionTypes.INIT_MY_DATA: {
