@@ -1,4 +1,5 @@
 # curso-angular6 29/12
+#https://github.com/asmx1986/fswd-angular6
 #crear repositorio en github
 En git cli:
 cd  ~/Documents/Proyectos/Capacitacion/Angular/coursera_desarrollar-paginas-web-con-angular 

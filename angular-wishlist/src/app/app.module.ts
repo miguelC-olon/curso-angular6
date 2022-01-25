@@ -10,12 +10,28 @@ import { ListaDestinosComponent } from './lista-destinos/lista-destinos.componen
 import { DestinoDetalleComponent } from './destino-detalle/destino-detalle.component';
 import { FormDetinoViajeComponent } from './form-detino-viaje/form-detino-viaje.component';
 import { DestinosApiClient } from './models/destinos-api-client.model';
+import { StoreModule as NgRxStoreModule, ActionReducerMap, Store } from '@ngrx/store';
+import {
+  DestinosViajesState,
+  initializeDestinosViajesState,
+  reducerDestinosViajes,
+  DestinosViajesEffects,
+  InitMyDataAction
+} from './models/destinos-viajes-state.model';
 
 const routes: Routes = [
 	{path: '', redirectTo: 'home', pathMatch: 'full'},
 	{path: 'home', component: ListaDestinosComponent},
 	{path: 'destino', component: DestinoDetalleComponent}
 ]
+// redux init
+export interface AppState {
+  destinos: DestinosViajesState;
+}
+
+const reducers: ActionReducerMap<AppState> = {
+  destinos: reducerDestinosViajes
+};
 
 @NgModule({
   declarations: [
